@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <!-- LinearLayout to wrap all views -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/textHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/produtos_em_destaque"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginVertical="20dp" />
+
+        <!-- Produtos Eletronicos Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Product Box 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#333333"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+                <!-- Product Image -->
+                <ImageView
+                    android:id="@+id/productImage1"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/Challengecelular"
+                    tools:ignore="ContentDescription" />
+
+                <!-- Product Title -->
+                <TextView
+                    android:id="@+id/productTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/produto_iphone_title"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp" />
+
+                <!-- Product Subtitle -->
+                <TextView
+                    android:id="@+id/productSubtitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="@string/produto_iphone_subtitle"
+                    android:textColor="#807A7A"
+                    android:textDecorationLine="line-through"
+                    android:textSize="14sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <!-- Product Price -->
+                <TextView
+                    android:id="@+id/productPrice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/produto_iphone_price"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <!-- Favoritar and Carrinho Icons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp">
+
+                    <!-- Favoritar Icon -->
+                    <ImageView
+                        android:id="@+id/iconFavoritar1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/favorito"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <!-- Carrinho Icon -->
+                    <ImageView
+                        android:id="@+id/iconCarrinho1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/carrinho"
+                        tools:ignore="ContentDescription,RtlHardcoded,ImageContrastCheck,ImageContrastCheck" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Product Box 2: TV -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#333333"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+                <!-- Product Image -->
+                <ImageView
+                    android:id="@+id/productImage2"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/Challengetv"
+                    tools:ignore="ContentDescription" />
+
+                <!-- Product Title -->
+                <TextView
+                    android:id="@+id/productTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/produto_tv_title"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp" />
+
+                <!-- Product Subtitle -->
+                <TextView
+                    android:id="@+id/productSubtitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="@string/produto_tv_subtitle"
+                    android:textColor="#807A7A"
+                    android:textDecorationLine="line-through"
+                    android:textSize="14sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <!-- Product Price -->
+                <TextView
+                    android:id="@+id/productPrice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/produto_tv_price"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <!-- Favoritar and Carrinho Icons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp">
+
+                    <!-- Favoritar Icon -->
+                    <ImageView
+                        android:id="@+id/iconFavoritar2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/favorito"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                    <!-- Carrinho Icon -->
+                    <ImageView
+                        android:id="@+id/iconCarrinho2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/carrinho"
+                        tools:ignore="ContentDescription, RtlHardcoded,ImageContrastCheck" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Product Box 3: Fritadeira -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#333333"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+                <!-- Product Image -->
+                <ImageView
+                    android:id="@+id/productImage3"
+                    android:layout_width="144dp"
+                    android:layout_height="144dp"
+                    android:src="@drawable/Challengefritadeira"
+                    tools:ignore="ContentDescription" />
+
+                <!-- Product Title -->
+                <TextView
+                    android:id="@+id/productTitle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/produto_airfryer_title"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp" />
+
+                <!-- Product Subtitle -->
+                <TextView
+                    android:id="@+id/productSubtitle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/produto_airfryer_subtitle"
+                    android:textSize="14sp"
+                    android:textColor="#807A7A"
+                    android:gravity="center"
+                    android:textDecorationLine="line-through"
+                    android:layout_marginBottom="5dp" />
+
+                <!-- Product Price -->
+                <TextView
+                    android:id="@+id/productPrice3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/produto_airfryer_price"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <!-- Favoritar and Carrinho Icons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp">
+
+                    <!-- Favoritar Icon -->
+                    <ImageView
+                        android:id="@+id/iconFavoritar3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/favorito"
+                        tools:ignore="ContentDescription" />
+
+                    <!-- Carrinho Icon -->
+                    <ImageView
+                        android:id="@+id/iconCarrinho3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/carrinho"
+                        tools:ignore="ContentDescription, RtlHardcoded" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Produtos Domesticos Section -->
+        <TextView
+            android:id="@+id/textHeaderDomestic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/produtos_domesticos"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginVertical="20dp" />
+
+        <!-- Consumer Week Section -->
+        <TextView
+            android:id="@+id/textHeaderConsumer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/semana_do_consumidor"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginVertical="20dp" />
+
+        <!-- Consumer Week Content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Consumer Week Image -->
+            <ImageView
+                android:id="@+id/consumerWeekImage"
+                android:layout_width="match_parent"
+                android:layout_height="196dp"
+                android:src="@drawable/Challengeconsumidor"
+                android:layout_marginBottom="10dp"
+                tools:ignore="ContentDescription" />
+
+            <!-- Consumer Week Title -->
+            <TextView
+                android:id="@+id/consumerWeekTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/consumer_week_title"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Consumer Week Text -->
+            <TextView
+                android:id="@+id/consumerWeekText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/consumer_week_text"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                tools:ignore="VisualLintLongText" />
+        </LinearLayout>
+
+        <!-- ChatBot Button -->
+        <ImageView
+            android:id="@+id/chatBot"
+            android:layout_width="66dp"
+            android:layout_height="55dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="#0043EF91"
+            android:padding="12dp"
+            android:src="@drawable/chatbot"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout> <!-- End of Wrapper LinearLayout -->
+
+</ScrollView>

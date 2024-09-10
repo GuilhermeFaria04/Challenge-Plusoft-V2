@@ -1,0 +1,50 @@
+<resources>
+        <string name="app_name">Wink</string>
+
+        <!-- Cadastro -->
+        <string name="title_cadastro">Cadastro</string>
+        <string name="subtitle_cadastro">Preencha os dados para Cadastrar!</string>
+        <string name="form_name_hint">Digite seu Nome</string>
+        <string name="form_email_hint">Digite seu Email</string>
+        <string name="form_telefone_hint">Digite seu Telefone</string>
+        <string name="form_password_hint">Digite sua Senha</string>
+        <string name="form_confirm_password_hint">Confirme sua Senha</string>
+        <string name="link_login">Já possui cadastro? Clique aqui</string>
+        <string name="button_cadastrar">Cadastrar</string>
+        <string name="label_name">Nome</string>
+        <string name="label_email">Email</string>
+        <string name="label_telefone">Telefone</string>
+        <string name="label_password">Senha</string>
+        <string name="label_confirm_password">Confirmar Senha</string>
+
+        <!-- login -->
+        <string name="login_title">Login</string>
+        <string name="login_subtitle">Preencha os dados do login para acessar!</string>
+        <string name="register_link">Não possui cadastro? Clique aqui</string>
+        <string name="login_button">Logar</string>
+
+        <!-- Home -->
+        <string name="produtos_em_destaque">Produtos em destaque!</string>
+        <string name="produtos_domesticos">Produtos domésticos</string>
+        <string name="semana_do_consumidor">Semana do consumidor</string>
+
+        <string name="produto_iphone_title">Smartphone Apple iPhone 13 256GB 5G Tela 6.1&quot; Vermelho</string>
+        <string name="produto_iphone_subtitle">de R$ 8.999,00</string>
+        <string name="produto_iphone_price">Por R$ 4.589,00 no PIX</string>
+
+        <string name="produto_tv_title">Smart TV LG 55&quot; NanoCell 4K UHD WebOS 23 ThinQ AI 55NANO77SRA</string>
+        <string name="produto_tv_subtitle">de R$ 4.999,00</string>
+        <string name="produto_tv_price">Por R$ 2.999,00 no PIX</string>
+
+        <string name="produto_airfryer_title">Fritadeira Airfryer Electrolux Family Efficient EAF51 5L 1700W 127V Vermelho</string>
+        <string name="produto_airfryer_subtitle">de R$ 699,00</string>
+        <string name="produto_airfryer_price">Por R$ 399,00 no PIX</string>
+
+        <string name="consumer_week_title">Semana do Consumidor 2024: A Black Friday do primeiro semestre!</string>
+        <string name="consumer_week_text">O dia 15 de março é marcado como o Dia do Consumidor, por ser a data em que foi falado pela primeira vez sobre os direitos do consumidor. Desde então, campanhas e promoções especiais são promovidas todos os anos, como uma oportunidade de retribuir e reforçar esses direitos ao consumidor, com promoções para saudar esse cliente tão especial.</string>
+
+        <string name="favoritar">Favoritar</string>
+        <string name="adicionar_ao_carrinho">Adicionar ao Carrinho</string>
+
+        <string name="chatbot">ChatBot</string>
+</resources>
