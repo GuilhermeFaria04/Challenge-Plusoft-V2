@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/header.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/headerBackground"
+    android:padding="16dp">
+
+    <!-- Top section with logo and icons -->
+    <LinearLayout
+        android:id="@+id/topSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Logo Wink -->
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wink"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Icons Row -->
+        <LinearLayout
+            android:id="@+id/iconsRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Icons -->
+            <ImageView
+                android:id="@+id/userIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/user"
+                android:tint="@android:color/white"
+                android:layout_marginStart="8dp"
+                tools:ignore="ContentDescription,UseAppTint" />
+
+            <ImageView
+                android:id="@+id/loginIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/login"
+                android:tint="@android:color/white"
+                android:layout_marginStart="8dp"
+                tools:ignore="ContentDescription,UseAppTint"/>
+
+            <ImageView
+                android:id="@+id/favoriteIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/favorito"
+                android:tint="@android:color/white"
+                tools:ignore="ContentDescription,UseAppTint"
+                android:layout_marginStart="8dp" />
+
+            <ImageView
+                android:id="@+id/cartIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/carrinho"
+                android:tint="@android:color/white"
+                tools:ignore="ContentDescription,UseAppTint"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Search bar -->
+    <LinearLayout
+        android:id="@+id/barraPesquisa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/searchIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/lupa"
+            android:tint="@android:color/black"
+            tools:ignore="ContentDescription,UseAppTint"/>
+
+        <EditText
+            android:id="@+id/pesquisaInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autofillHints="search"
+            android:hint="@string/busca"
+            android:textColor="@android:color/black"
+            android:paddingStart="8dp"
+            tools:ignore="RtlSymmetry,TextFields" />
+    </LinearLayout>
+</LinearLayout>

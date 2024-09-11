@@ -1,4 +1,5 @@
 <resources>
+        <item name="recyclerView" type="id" />
         <string name="app_name">Wink</string>
 
         <!-- Cadastro -->
@@ -47,4 +48,8 @@
         <string name="adicionar_ao_carrinho">Adicionar ao Carrinho</string>
 
         <string name="chatbot">ChatBot</string>
+
+        <string name="busca">Busca</string>
+        <string name="wink">Wink</string>
+
 </resources>
