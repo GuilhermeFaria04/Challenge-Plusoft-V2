@@ -52,4 +52,12 @@
         <string name="busca">Busca</string>
         <string name="wink">Wink</string>
 
+        <string name="favoritos">Favoritos</string>
+
+        <string name="meu_carrinho">Carrinho</string>
+        <string name="nome_produto">Produtos</string>
+        <string name="quantidade">Quantidade</string>
+        <string name="total">Total</string>
+
+
 </resources>

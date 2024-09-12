@@ -6,5 +6,5 @@ data class Produto(
     val price: String,
     val imageResId: Int,
     val iconFavoritarId: Int,
-    val iconCarrinhoId: Int
+    val iconCarrinhoId: Int,
 )

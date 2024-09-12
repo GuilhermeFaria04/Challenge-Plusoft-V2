@@ -14,6 +14,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <include
+            layout="@layout/headerlayout" />
+
         <!-- Header -->
         <TextView
             android:id="@+id/textHeader"
@@ -47,7 +50,7 @@
                     android:id="@+id/productImage1"
                     android:layout_width="144dp"
                     android:layout_height="144dp"
-                    android:src="@drawable/challengecelular"
+                    android:src="@drawable/celular"
                     tools:ignore="ContentDescription" />
 
                 <!-- Product Title -->
@@ -127,7 +130,7 @@
                     android:id="@+id/productImage2"
                     android:layout_width="144dp"
                     android:layout_height="144dp"
-                    android:src="@drawable/challengetv"
+                    android:src="@drawable/tv"
                     tools:ignore="ContentDescription" />
 
                 <!-- Product Title -->
@@ -218,7 +221,7 @@
                     android:id="@+id/productImage3"
                     android:layout_width="144dp"
                     android:layout_height="144dp"
-                    android:src="@drawable/challengefritadeira"
+                    android:src="@drawable/fritadeira"
                     tools:ignore="ContentDescription" />
 
                 <!-- Product Title -->
@@ -310,7 +313,7 @@
                 android:id="@+id/consumerWeekImage"
                 android:layout_width="match_parent"
                 android:layout_height="196dp"
-                android:src="@drawable/challengeconsumidor"
+                android:src="@drawable/consumidor"
                 android:layout_marginBottom="10dp"
                 tools:ignore="ContentDescription" />
 

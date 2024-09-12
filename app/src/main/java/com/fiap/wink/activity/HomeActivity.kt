@@ -27,17 +27,17 @@ class HomeActivity : AppCompatActivity() {
             "Smartphone Apple iPhone 13 256GB 5G Tela 6.1\" Vermelho",
             "de R$ 8.999,00",
             "Por R$ 4.589,00 no PIX",
-            R.drawable.challengecelular, // Corrigido para Int
+            R.drawable.celular, // Corrigido para Int
             R.id.iconFavoritar1,
-            R.id.iconCarrinho1
+            R.id.iconCarrinho1,
         ),
         Produto(
             "Smart TV LG 55\" NanoCell 4K UHD WebOS 23 ThinQ AI 55NANO77SRA",
             "de R$ 4.999,00",
             "Por R$ 2.999,00 no PIX",
-            R.drawable.challengetv, // Corrigido para Int
+            R.drawable.tv, // Corrigido para Int
             R.id.iconFavoritar1,
-            R.id.iconCarrinho1
+            R.id.iconCarrinho1,
         )
     )
 
@@ -46,9 +46,9 @@ class HomeActivity : AppCompatActivity() {
             "Fritadeira Airfryer Electrolux Family Efficient EAF51 5L 1700W 127V Vermelho",
             "de R$ 699,00",
             "Por R$ 399,00 no PIX",
-            R.drawable.challengefritadeira, // Corrigido para Int
+            R.drawable.fritadeira, // Corrigido para Int
             R.id.iconFavoritar1,
-            R.id.iconCarrinho1
+            R.id.iconCarrinho1,
         )
     )
 
