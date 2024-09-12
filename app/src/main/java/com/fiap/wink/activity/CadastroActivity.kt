@@ -1,6 +1,7 @@
 package com.fiap.wink.activity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -63,7 +64,7 @@ class CadastroActivity : AppCompatActivity() {
         }
 
         loginLink.setOnClickListener {
-            // Adicionar ação para o link de login
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 

@@ -46,8 +46,6 @@ class LoginActivity : AppCompatActivity() {
         }
 
         registerLink.setOnClickListener {
-            // Navigates to the registration screen
-            // Assuming you use an Intent to navigate to the registration screen
             startActivity(Intent(this, CadastroActivity::class.java))
         }
     }
