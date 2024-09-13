@@ -8,7 +8,7 @@
 - Lucas Carabolad Bob (RM550519)
 - Thiago Ulrych (RM97951)
 
-### Desafios Proposto
+## Desafios Proposto
 
 Desvendando o Potencial dos Dados: Explorando a AI Generativa e o Deep Analytics para Impulsionar o Crescimento Empresarial
 
