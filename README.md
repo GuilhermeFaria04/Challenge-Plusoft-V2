@@ -1,4 +1,4 @@
-# Challenge FIAP
+# Wink Projeto - Mobile (Kotlin)
 
 # Equipe Wink
 
@@ -15,6 +15,13 @@ Desvendando o Potencial dos Dados: Explorando a AI Generativa e o Deep Analytics
 ## Introdução
 
 Imagine uma solução que torna a navegação em aplicativos mais fácil e acessível para todos, especialmente para aqueles que podem sentir-se perdidos ou confusos ao usar novas tecnologias. Nosso projeto visa criar um ChatBot inteligente que atua como um guia amigável, ajudando os usuários a navegar pela aplicação e responder suas dúvidas sobre produtos. Nosso foco principal é oferecer suporte para o público idoso, que muitas vezes enfrenta dificuldades com a tecnologia e pode se beneficiar enormemente de uma assistência personalizada e intuitiva.
+
+## Tecnologia Utilizada
+
+Kotlin: Linguagem de programação utilizada para o desenvolvimento do aplicativo móvel, escolhida pela sua robustez e compatibilidade com a plataforma Android.
+
+Android Studio: Ambiente de desenvolvimento integrado (IDE) utilizado para construir e testar o aplicativo, proporcionando ferramentas avançadas para desenvolvimento em Kotlin.
+
 
 ## Sobre a Nossa Ideia
 
