@@ -16,12 +16,25 @@ Desvendando o Potencial dos Dados: Explorando a AI Generativa e o Deep Analytics
 
 Imagine uma solução que torna a navegação em aplicativos mais fácil e acessível para todos, especialmente para aqueles que podem sentir-se perdidos ou confusos ao usar novas tecnologias. Nosso projeto visa criar um ChatBot inteligente que atua como um guia amigável, ajudando os usuários a navegar pela aplicação e responder suas dúvidas sobre produtos. Nosso foco principal é oferecer suporte para o público idoso, que muitas vezes enfrenta dificuldades com a tecnologia e pode se beneficiar enormemente de uma assistência personalizada e intuitiva.
 
+## 📋 Requisitos
+Android Studio(para desenvolvimento e teste do aplicativo)
+
+Descrição: Ambiente de Desenvolvimento Integrado (IDE) necessário para construir e depurar o aplicativo Android.
+Versão recomendada: A versão mais recente disponível no site oficial do Android Studio.
+Kotlin (para desenvolvimento do aplicativo móvel)
+
+Descrição: Linguagem de programação utilizada para desenvolver o aplicativo, escolhida pela sua robustez e compatibilidade com a plataforma Android.
+Versão recomendada: Kotlin 1.7 ou superior.
+Android SDK (para desenvolvimento e integração com a plataforma Android)
+
+Descrição: Conjunto de ferramentas e bibliotecas necessárias para desenvolver e testar aplicativos Android.
+Versão recomendada: A versão mais recente compatível com a versão do Android Studio.
+
 ## Tecnologia Utilizada
 
 Kotlin: Linguagem de programação utilizada para o desenvolvimento do aplicativo móvel, escolhida pela sua robustez e compatibilidade com a plataforma Android.
 
 Android Studio: Ambiente de desenvolvimento integrado (IDE) utilizado para construir e testar o aplicativo, proporcionando ferramentas avançadas para desenvolvimento em Kotlin.
-
 
 ## Sobre a Nossa Ideia
 
@@ -42,8 +55,9 @@ O avanço tecnológico trouxe inúmeros benefícios, mas também criou barreiras
 
 4.  Responder Dúvidas sobre Produtos
     Além de ajudar na navegação, o ChatBot também fornecerá informações sobre os produtos, respondendo perguntas comuns dos usuários e ajudando-os a tomar decisões informadas sobre suas compras.
+
     
-5.  Promover a Inclusão Digital
+6.  Promover a Inclusão Digital
     Queremos promover a inclusão digital, garantindo que pessoas de todas as idades e níveis de experiência tecnológica possam aproveitar os benefícios dos aplicativos móveis, sem sentir-se excluídas ou sobrecarregadas.
 
 
