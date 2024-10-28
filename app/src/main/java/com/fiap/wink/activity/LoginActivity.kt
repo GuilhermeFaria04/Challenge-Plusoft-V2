@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fiap.wink.R
 import com.fiap.wink.model.User
+
 import com.fiap.wink.api.ApiService
 import okhttp3.ResponseBody
 import retrofit2.Call
