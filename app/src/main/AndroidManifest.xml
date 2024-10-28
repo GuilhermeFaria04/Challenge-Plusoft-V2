@@ -37,6 +37,9 @@
         <activity android:name=".activity.FavoritosActivity"
             android:exported="false" />
 
+        <activity android:name=".activity.EditCadastroActivity"
+            android:exported="false" />
+
 
     </application>
 

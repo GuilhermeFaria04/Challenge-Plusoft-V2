@@ -1,5 +1,6 @@
 package com.fiap.wink.activity
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -24,6 +25,10 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginButton: Button
     private lateinit var registerLink: TextView
 
+    private val sharedPreferences by lazy {
+        getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.loginlayout)
@@ -32,6 +37,8 @@ class LoginActivity : AppCompatActivity() {
         passwordEditText = findViewById(R.id.editTextPassword)
         loginButton = findViewById(R.id.buttonLogin)
         registerLink = findViewById(R.id.textRegisterLink)
+
+        loadUserData()
 
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString()
@@ -62,7 +69,8 @@ class LoginActivity : AppCompatActivity() {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 if (response.isSuccessful) {
                     Toast.makeText(this@LoginActivity, "Login realizado com sucesso!", Toast.LENGTH_SHORT).show()
-                    // Navigate to home screen
+                    saveUserData(user.email, user.password)
+
                     startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                 } else {
                     Toast.makeText(this@LoginActivity, "Erro ao realizar login!", Toast.LENGTH_SHORT).show()
@@ -75,5 +83,19 @@ class LoginActivity : AppCompatActivity() {
             }
         })
     }
-}
 
+    private fun saveUserData(email: String, password: String) {
+        val editor = sharedPreferences.edit()
+        editor.putString("user_email", email)
+        editor.putString("user_password", password)
+        editor.apply() // Aplicar as mudanças
+    }
+
+    private fun loadUserData() {
+        val email = sharedPreferences.getString("user_email", "")
+        val password = sharedPreferences.getString("user_password", "")
+
+        emailEditText.setText(email)
+        passwordEditText.setText(password)
+    }
+}

@@ -1,48 +1,49 @@
 package com.fiap.wink.activity
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.fiap.wink.R
 import com.fiap.wink.api.ApiService
 import com.fiap.wink.model.Cadastro
-import com.fiap.wink.R
 import okhttp3.ResponseBody
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
-class CadastroActivity : AppCompatActivity() {
+class EditCadastroActivity : AppCompatActivity() {
 
     private lateinit var nomeEditText: EditText
     private lateinit var emailEditText: EditText
     private lateinit var telefoneEditText: EditText
     private lateinit var senhaEditText: EditText
     private lateinit var confirmarSenhaEditText: EditText
-    private lateinit var cadastroButton: Button
-    private lateinit var loginLink: TextView
+    private lateinit var atualizarButton: Button
+    private lateinit var deletarButton: Button
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.cadastrolayout)
-
+        setContentView(R.layout.edit_cadastrolayout)
 
         nomeEditText = findViewById(R.id.editTextNome)
         emailEditText = findViewById(R.id.editTextEmail)
         telefoneEditText = findViewById(R.id.editTextTelefone)
         senhaEditText = findViewById(R.id.editTextSenha)
         confirmarSenhaEditText = findViewById(R.id.editTextConfirmarSenha)
-        cadastroButton = findViewById(R.id.buttonCadastrar)
-        loginLink = findViewById(R.id.textLoginLink)
+        atualizarButton = findViewById(R.id.buttonAtualizar)
+        deletarButton = findViewById(R.id.buttonDeletar)
 
-        cadastroButton.setOnClickListener {
+        // Apenas uma cena de teste do código
+        val userId = "12345"
+
+        // Carregar os detalhes do usuário
+        getUserDetails(userId)
+
+        atualizarButton.setOnClickListener {
             val nome = nomeEditText.text.toString().trim()
             val email = emailEditText.text.toString().trim()
             val telefone = telefoneEditText.text.toString().trim()
@@ -60,36 +61,12 @@ class CadastroActivity : AppCompatActivity() {
             }
 
             val cadastro = Cadastro(nome, email, telefone, senha)
-            registerUser(cadastro)
+            updateUser(userId, cadastro)
         }
 
-        loginLink.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+        deletarButton.setOnClickListener {
+            deleteUser(userId)
         }
-    }
-
-    private fun registerUser(cadastro: Cadastro) {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("http://localhost:5000/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-
-        val apiService = retrofit.create(ApiService::class.java)
-
-        apiService.registro(cadastro).enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                if (response.isSuccessful) {
-                    Toast.makeText(this@CadastroActivity, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(this@CadastroActivity, "Erro ao realizar cadastro!", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                Toast.makeText(this@CadastroActivity, "Erro na comunicação com o servidor: ${t.message}", Toast.LENGTH_SHORT).show()
-                t.printStackTrace() // Para mais detalhes no logcat
-            }
-        })
     }
 
     private fun getUserDetails(userId: String) {
@@ -108,13 +85,12 @@ class CadastroActivity : AppCompatActivity() {
                     emailEditText.setText(user?.email)
                     telefoneEditText.setText(user?.telefone)
                 } else {
-                    Toast.makeText(this@CadastroActivity, "Erro ao buscar dados!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@EditCadastroActivity, "Erro ao buscar dados!", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<Cadastro>, t: Throwable) {
-                Toast.makeText(this@CadastroActivity, "Erro na comunicação com o servidor: ${t.message}", Toast.LENGTH_SHORT).show()
-                t.printStackTrace()
+                Toast.makeText(this@EditCadastroActivity, "Erro na comunicação com o servidor: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
@@ -130,15 +106,14 @@ class CadastroActivity : AppCompatActivity() {
         apiService.updateUser(userId, cadastro).enqueue(object : Callback<ResponseBody> {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 if (response.isSuccessful) {
-                    Toast.makeText(this@CadastroActivity, "Cadastro atualizado com sucesso!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@EditCadastroActivity, "Cadastro atualizado com sucesso!", Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this@CadastroActivity, "Erro ao atualizar cadastro!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@EditCadastroActivity, "Erro ao atualizar cadastro!", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                Toast.makeText(this@CadastroActivity, "Erro na comunicação com o servidor: ${t.message}", Toast.LENGTH_SHORT).show()
-                t.printStackTrace()
+                Toast.makeText(this@EditCadastroActivity, "Erro na comunicação com o servidor: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
@@ -154,19 +129,16 @@ class CadastroActivity : AppCompatActivity() {
         apiService.deleteUser(userId).enqueue(object : Callback<ResponseBody> {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
                 if (response.isSuccessful) {
-                    Toast.makeText(this@CadastroActivity, "Cadastro deletado com sucesso!", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@CadastroActivity, LoginActivity::class.java))
-                    finish() // Finaliza a activity atual
+                    Toast.makeText(this@EditCadastroActivity, "Cadastro deletado com sucesso!", Toast.LENGTH_SHORT).show()
+                    finish()
                 } else {
-                    Toast.makeText(this@CadastroActivity, "Erro ao deletar cadastro!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@EditCadastroActivity, "Erro ao deletar cadastro!", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                Toast.makeText(this@CadastroActivity, "Erro na comunicação com o servidor: ${t.message}", Toast.LENGTH_SHORT).show()
-                t.printStackTrace()
+                Toast.makeText(this@EditCadastroActivity, "Erro na comunicação com o servidor: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
-
 }

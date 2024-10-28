@@ -35,7 +35,7 @@ class HomeActivity : AppCompatActivity() {
         val searchInput = findViewById<TextView>(R.id.pesquisaInput)
 
         userIcon.setOnClickListener {
-            startActivity(Intent(this, CadastroActivity::class.java))
+            startActivity(Intent(this, EditCadastroActivity::class.java))
         }
 
         loginIcon.setOnClickListener {
@@ -55,7 +55,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun fetchProdutos() {
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://localhost:5000/") // URL base da sua API
+            .baseUrl("http://localhost:5000/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
@@ -79,8 +79,6 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun displayProdutos(produtos: List<Produto>) {
-        // Aqui você pode usar os dados dos produtos para atualizar a UI.
-        // Exemplo: Mostrar o primeiro produto em uma visualização
         if (produtos.isNotEmpty()) {
             val produto = produtos[0]
 
@@ -99,11 +97,11 @@ class HomeActivity : AppCompatActivity() {
             favoriteIcon1.setOnClickListener {
                 if (produtosFavoritos.contains(produto)) {
                     produtosFavoritos.remove(produto)
-                    favoriteIcon1.setImageResource(R.drawable.favorito) // Ícone não selecionado
+                    favoriteIcon1.setImageResource(R.drawable.favorito)
                     showToast("Removido dos Favoritos")
                 } else {
                     produtosFavoritos.add(produto)
-                    favoriteIcon1.setImageResource(R.drawable.favorito) // Ícone selecionado
+                    favoriteIcon1.setImageResource(R.drawable.favorito)
                     showToast("Adicionado aos Favoritos")
                 }
             }

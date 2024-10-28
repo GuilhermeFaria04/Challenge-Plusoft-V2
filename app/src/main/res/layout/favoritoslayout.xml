@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000"
@@ -10,8 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include
-            layout="@layout/headerlayout" />
+        <include layout="@layout/headerlayout" />
 
         <TextView
             android:id="@+id/titulo"
@@ -29,7 +29,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <!-- Os produtos serão inseridos dinamicamente aqui -->
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/semFavoritosMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Você ainda não tem produtos favoritos."
+            android:textColor="#FFF"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 </ScrollView>

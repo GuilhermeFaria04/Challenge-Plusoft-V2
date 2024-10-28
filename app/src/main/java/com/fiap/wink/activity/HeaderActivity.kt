@@ -14,35 +14,35 @@ class HeaderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.headerlayout)
 
-        // Configurações de navegação para os ícones
+
         val userIcon = findViewById<ImageView>(R.id.userIcon)
         val loginIcon = findViewById<ImageView>(R.id.loginIcon)
         val favoriteIcon = findViewById<ImageView>(R.id.favoriteIcon)
         val cartIcon = findViewById<ImageView>(R.id.cartIcon)
         val searchInput = findViewById<EditText>(R.id.pesquisaInput)
 
-        // Logo click (voltar para Home)
+
         val logo = findViewById<TextView>(R.id.logo)
         logo.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java)) // Navega para a Home
+            startActivity(Intent(this, HomeActivity::class.java))
         }
 
-        // User icon click (vai para Cadastro)
+
         userIcon.setOnClickListener {
-            startActivity(Intent(this, CadastroActivity::class.java))
+            startActivity(Intent(this, EditCadastroActivity::class.java))
         }
 
-        // Login icon click (vai para Login)
+
         loginIcon.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
-        // Favorite icon click (vai para Favoritos)
+
         favoriteIcon.setOnClickListener {
             startActivity(Intent(this, FavoritosActivity::class.java))
         }
 
-        // Cart icon click (vai para Carrinho)
+
         cartIcon.setOnClickListener {
             startActivity(Intent(this, CarrinhoActivity::class.java))
         }
