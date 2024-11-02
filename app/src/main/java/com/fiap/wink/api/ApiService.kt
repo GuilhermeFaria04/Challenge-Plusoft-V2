@@ -18,13 +18,13 @@ interface ApiService {
     @POST("/cadastro")
     fun registro(@Body cadastro: Cadastro): Call<ResponseBody>
 
-    @GET("/cadastro/{id}")
+    @GET("/editcadastro/{id}")
     fun getUser(@Path("id") id: String): Call<Cadastro>
 
-    @PUT("/cadastro/{id}")
+    @PUT("/editcadastro/{id}")
     fun updateUser(@Path("id") id: String, @Body cadastro: Cadastro): Call<ResponseBody>
 
-    @DELETE("/cadastro/{id}")
+    @DELETE("/editcadastro/{id}")
     fun deleteUser(@Path("id") id: String): Call<ResponseBody>
 
     @POST("login")

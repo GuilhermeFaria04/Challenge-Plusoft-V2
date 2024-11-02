@@ -80,7 +80,7 @@ class LoginActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 Toast.makeText(this@LoginActivity, "Erro na comunicação com o servidor: ${t.message}", Toast.LENGTH_SHORT).show()
-                t.printStackTrace() // Para mais detalhes no logcat
+                t.printStackTrace()
             }
         })
     }
@@ -89,7 +89,7 @@ class LoginActivity : AppCompatActivity() {
         val editor = sharedPreferences.edit()
         editor.putString("user_email", email)
         editor.putString("user_password", password)
-        editor.apply() // Aplicar as mudanças
+        editor.apply()
     }
 
     private fun loadUserData() {

@@ -5,59 +5,165 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:gravity="center"
+    android:background="#000000"
+    android:padding="20dp">
 
-    <EditText
-        android:id="@+id/editTextNome"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:hint="Nome"
-        tools:ignore="HardcodedText,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:ignore="TextSizeCheck">
 
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        tools:ignore="Autofill,HardcodedText,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+        <!-- Title -->
+        <TextView
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar Cadastro"
+            tools:ignore="HardcodedText" />
 
-    <EditText
-        android:id="@+id/editTextTelefone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Telefone"
-        tools:ignore="Autofill,HardcodedText,TextFields,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+        <!-- Form Inputs -->
+        <LinearLayout
+            style="@style/FormContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nova Senha"
-        android:inputType="textPassword"
-        tools:ignore="Autofill,HardcodedText,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+            <!-- Name Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:textColor="#0043EF"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
 
-    <EditText
-        android:id="@+id/editTextConfirmarSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Confirmar Nova Senha"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        tools:ignore="HardcodedText,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+            <EditText
+                android:id="@+id/editTextNome"
+                style="@style/TextInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:background="@drawable/edit_text_cadastro"
+                android:hint="Digite seu nome"
+                android:inputType="textPersonName"
+                tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/buttonAtualizar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Atualizar Cadastro"
-        tools:ignore="HardcodedText,VisualLintButtonSize" />
+            <!-- Email Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="#0043EF"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
 
-    <Button
-        android:id="@+id/buttonDeletar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Deletar Cadastro"
-        android:textColor="@android:color/holo_red_dark"
-        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+            <EditText
+                android:id="@+id/editTextEmail"
+                style="@style/TextInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/edit_text_cadastro"
+                android:hint="Digite seu email"
+                android:inputType="textEmailAddress"
+                tools:ignore="HardcodedText" />
+
+            <!-- Phone Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:text="Telefone"
+                android:textColor="#0043EF"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editTextTelefone"
+                style="@style/TextInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_cadastro"
+                android:hint="Digite seu telefone"
+                android:inputType="phone"
+                tools:ignore="Autofill,HardcodedText" />
+
+            <!-- Password Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nova Senha"
+                android:textColor="#0043EF"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editTextSenha"
+                style="@style/TextInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="newPassword"
+                android:background="@drawable/edit_text_cadastro"
+                android:hint="Digite sua nova senha"
+                android:inputType="textPassword"
+                tools:ignore="HardcodedText" />
+
+            <!-- Confirm Password Input -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirmar Nova Senha"
+                android:textColor="#0043EF"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <EditText
+                android:id="@+id/editTextConfirmarSenha"
+                style="@style/TextInputStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_cadastro"
+                android:hint="Confirme sua nova senha"
+                android:inputType="textPassword"
+                tools:ignore="Autofill,HardcodedText" />
+        </LinearLayout>
+
+        <!-- Update Button -->
+        <Button
+            android:id="@+id/buttonAtualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#0043EF"
+            android:elevation="4dp"
+            android:padding="10dp"
+            android:text="Atualizar Cadastro"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/buttonDeletar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#FF4444"
+            android:elevation="4dp"
+            android:padding="10dp"
+            android:text="Deletar Cadastro"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+    </LinearLayout>
 </LinearLayout>

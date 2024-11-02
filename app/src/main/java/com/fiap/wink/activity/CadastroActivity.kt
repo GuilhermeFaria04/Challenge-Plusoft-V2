@@ -87,7 +87,7 @@ class CadastroActivity : AppCompatActivity() {
 
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
                 Toast.makeText(this@CadastroActivity, "Erro na comunicação com o servidor: ${t.message}", Toast.LENGTH_SHORT).show()
-                t.printStackTrace() // Para mais detalhes no logcat
+                t.printStackTrace()
             }
         })
     }

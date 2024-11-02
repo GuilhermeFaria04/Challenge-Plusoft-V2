@@ -31,7 +31,7 @@ class CarrinhoActivity : Activity() {
     @SuppressLint("MissingInflatedId", "DefaultLocale")
     private fun renderItensCarrinho() {
         val container = findViewById<LinearLayout>(R.id.cartContainer)
-        container.removeAllViews() // Limpa o container antes de adicionar itens
+        container.removeAllViews()
 
         for (item in itensCarrinho) {
             val itemView = layoutInflater.inflate(R.layout.item_produto, container, false)
@@ -55,14 +55,13 @@ class CarrinhoActivity : Activity() {
             btnDecreaseQuantity.setOnClickListener {
                 if (item.quantity > 1) {
                     item.quantity--
-                    renderItensCarrinho() // Atualiza a UI
+                    renderItensCarrinho()
                 }
             }
 
-            // Remover item
             btnRemoveItem.setOnClickListener {
                 itensCarrinho.remove(item)
-                renderItensCarrinho() // Atualiza a UI
+                renderItensCarrinho()
             }
 
             container.addView(itemView)
@@ -78,7 +77,7 @@ class CarrinhoActivity : Activity() {
 
         val logo = findViewById<TextView>(R.id.logo)
         logo.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java)) // Navega para a Home
+            startActivity(Intent(this, HomeActivity::class.java))
         }
 
         userIcon.setOnClickListener {

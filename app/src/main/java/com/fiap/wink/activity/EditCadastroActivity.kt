@@ -37,10 +37,9 @@ class EditCadastroActivity : AppCompatActivity() {
         atualizarButton = findViewById(R.id.buttonAtualizar)
         deletarButton = findViewById(R.id.buttonDeletar)
 
-        // Apenas uma cena de teste do código
+
         val userId = "12345"
 
-        // Carregar os detalhes do usuário
         getUserDetails(userId)
 
         atualizarButton.setOnClickListener {

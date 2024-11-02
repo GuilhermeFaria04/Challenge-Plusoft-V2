@@ -52,7 +52,7 @@ class FavoritosActivity : AppCompatActivity() {
     @SuppressLint("InflateParams")
     private fun renderProdutos() {
         val container = findViewById<LinearLayout>(R.id.produtosContainer)
-        container.removeAllViews() // Limpar o container antes de adicionar novos itens
+        container.removeAllViews()
 
         for ((index, produto) in produtos.withIndex()) {
             val itemView = layoutInflater.inflate(R.layout.item_produto, null)
@@ -63,7 +63,6 @@ class FavoritosActivity : AppCompatActivity() {
             titleTextView.text = produto.title
             imageView.setImageResource(produto.imageResId)
 
-            // Configurar o ícone para remover do favoritos
             itemView.findViewById<ImageView>(R.id.iconFavoritar1).setOnClickListener {
                 removeProduct(index)
             }
@@ -73,8 +72,8 @@ class FavoritosActivity : AppCompatActivity() {
     }
 
     private fun removeProduct(index: Int) {
-        produtos.removeAt(index) // Remove o produto da lista
-        renderProdutos() // Re-renderizar a lista de produtos
+        produtos.removeAt(index)
+        renderProdutos()
         Toast.makeText(this, "Removido dos favoritos", Toast.LENGTH_SHORT).show()
     }
 
@@ -106,7 +105,6 @@ class FavoritosActivity : AppCompatActivity() {
             startActivity(Intent(this, CarrinhoActivity::class.java))
         }
 
-        // Barra de pesquisa - aqui você pode configurar a lógica de busca
         searchInput.setOnEditorActionListener { _, _, _ -> true }
     }
 }
